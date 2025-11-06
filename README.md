@@ -1,1 +1,1 @@
-# ps2-horror-be
+# Server for PS2 Survival Horror

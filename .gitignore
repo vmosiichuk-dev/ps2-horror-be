@@ -1,0 +1,8 @@
+*.swp
+*.tmp
+*.log
+.env
+.DS_STORE
+
+coverage/
+node_modules/
