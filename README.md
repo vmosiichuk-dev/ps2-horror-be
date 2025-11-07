@@ -1,6 +1,6 @@
 # PS2 Survival Horror – Back-end
 
-This project includes [`ps2-horror-shared`](https://github.com/vmosiichuk-dev/ps2-horror-shared) as a Git submodule, providing shared TypeScript types and utility functions.
+This project includes [`ps2-horror-shared`](https://github.com/vmosiichuk-dev/ps2-horror-shared) as a Git submodule, providing shared TypeScript types and utilities.
 
 ## Get started
 
@@ -20,7 +20,7 @@ npm install
 
 ## Submodule usage
 
-The module is designed for explicit imports only:
+It is designed for explicit imports only, to clearly distinguish type and function imports:
 
 ```ts
 import type { GameItem } from 'ps2-horror-shared/types';
