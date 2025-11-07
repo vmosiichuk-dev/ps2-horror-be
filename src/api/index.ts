@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import { Router } from 'express';
-import { igdbRouter } from '../features/igdb/igdb.route';
-import { supabaseRouter } from '../features/supabase/supabase.route';
+import { igdbRouter } from '../features/igdb/igdb.route.ts';
+import { supabaseRouter } from '../features/supabase/supabase.route.ts';
 
 export const router = Router();
 

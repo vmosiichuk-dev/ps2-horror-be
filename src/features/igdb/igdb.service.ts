@@ -1,4 +1,4 @@
-import { ENV } from '../../config/env';
+import { ENV } from '../../config/env.ts';
 
 let cachedToken: string | null = null;
 let tokenExpiration: number = 0;

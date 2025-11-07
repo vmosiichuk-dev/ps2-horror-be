@@ -1,6 +1,7 @@
-import type { IGDBGame, GameItem, Rating } from './games.types';
-import { fetchGameFromDB, fetchPriceFromDB } from '../../lib/supabase.service';
-import { ENV } from '../../config/env';
+import type { IGDBGame } from './games.types.ts';
+import type { GameItem, Rating } from 'ps2-horror-shared/types'
+import { fetchGameFromDB, fetchPriceFromDB } from '../../lib/supabase.service.ts';
+import { ENV } from '../../config/env.ts';
 
 import {
 	formatAgeRatings,
@@ -11,7 +12,7 @@ import {
 	formatWebsites,
 	formatPrice,
 	mergeGameFromDB,
-} from './games.utils';
+} from './games.utils.ts';
 
 export const formatGames = async (igdbGames: IGDBGame[] | unknown): Promise<GameItem[]> => {
 	if (!igdbGames || !Array.isArray(igdbGames)) return [];

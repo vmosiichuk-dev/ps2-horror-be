@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { Router } from 'express';
-import { ENV } from '../../config/env';
+import { ENV } from '../../config/env.ts';
 
 export const supabaseRouter = Router();
 

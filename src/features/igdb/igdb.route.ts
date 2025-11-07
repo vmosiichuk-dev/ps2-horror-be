@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
-import type { IGDBGame } from '../games/games.types';
+import type { IGDBGame } from '../games/games.types.ts';
 import { Router } from 'express';
-import { formatGames } from '../games/games.service';
+import { formatGames } from '../games/games.service.ts';
 import { igdbRequest } from './igdb.service.ts';
 
 export const igdbRouter = Router();

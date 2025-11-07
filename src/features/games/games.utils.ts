@@ -3,19 +3,21 @@ import type {
 	Company,
 	GameItem,
 	GamePrice,
+	Price,
+	Release,
+	Website,
+} from 'ps2-horror-shared/types';
+
+import type {
 	IGDBAgeRating,
 	IGDBCompany,
 	IGDBGame,
 	IGDBWebsite,
-	Price,
-	Release,
 	SBGameItem,
 	SBPriceItem,
-	Website
-} from './games.types';
+} from './games.types.ts';
 
-import { normalizeDBNumber } from '../../utils';
-import { ENV } from '../../config/env';
+import { ENV } from '../../config/env.ts';
 
 const AGE_RATING_PRIORITY: Record<string, number> = {
 	acb: 2,
@@ -26,6 +28,14 @@ const AGE_RATING_PRIORITY: Record<string, number> = {
 	pegi: 6,
 	usk: 4,
 	fallback: 0,
+};
+
+const normalizeDBNumber = <T>(
+	value: unknown,
+	fallback: T
+) => {
+	const normalizedValue = isNaN(Number(value)) ? fallback : Number(value);
+	return normalizedValue as T;
 };
 
 export const sortAgeRatings = (ageRatings: AgeRating[]) => {

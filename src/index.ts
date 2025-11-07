@@ -3,8 +3,8 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { router } from './api';
-import { CORS_OPTIONS } from './config/cors';
+import { router } from './api/index.ts';
+import { CORS_OPTIONS } from './config/cors.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
